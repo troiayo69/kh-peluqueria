@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>K&amp;H Peluquería Caballeros · Barbería en la Malvarrosa, València</title>
+<meta name="description" content="K&amp;H Peluquería Caballeros: cortes a tijera y máquina, degradados y arreglo de barba en C/ de l'Illa de Hierro, 12 (València). Valoración 5,0 en Google. Pide cita por WhatsApp.">
+<meta name="theme-color" content="#FAF8F5">
+<meta property="og:type" content="website">
+<meta property="og:title" content="K&amp;H Peluquería Caballeros · València">
+<meta property="og:description" content="Cortes, degradados y barba en la Malvarrosa. 5,0 en Google con 1.225 reseñas. Reserva tu cita por WhatsApp.">
+<meta property="og:image" content="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80">
+
+<!-- Tipografías: Cormorant Garamond (títulos) + Plus Jakarta Sans (textos y botones) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://images.unsplash.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- Marca que hay JavaScript, para activar las animaciones sin ocultar contenido si JS falla -->
+<script>document.documentElement.classList.add('js');</script>
+
+<!-- Datos estructurados para Google (negocio local) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "K&H Peluquería Caballeros",
+  "image": "https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1200&q=80",
+  "telephone": "+34609910079",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "C/ de l'Illa de Hierro, 12",
+    "addressLocality": "València",
+    "postalCode": "46011",
+    "addressRegion": "Valencia",
+    "addressCountry": "ES"
+  },
+  "geo": { "@type": "GeoCoordinates", "latitude": 39.4825634, "longitude": -0.3295699 },
+  "hasMap": "https://maps.app.goo.gl/CGNkQETaXcJFkhFB6",
+  "openingHoursSpecification": [
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:30", "closes": "14:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "17:00", "closes": "20:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" },
+    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "17:00", "closes": "19:00" }
+  ]
+}
+</script>
+
+<style>
+/* =========================================================
+   1. VARIABLES DE DISEÑO (paleta, tipografías, medidas)
+   ========================================================= */
+:root {
+  --crema: #FAF8F5;          /* Fondo principal */
+  --carbon: #1E1E1E;         /* Texto principal */
+  --oro: #B89768;            /* Acento champán / bronce */
+  --oro-oscuro: #7E6240;     /* Bronce oscuro para textos pequeños (mejor contraste) */
+  --tierra: #EAE3D9;         /* Tarjetas */
+  --tierra-suave: #F2EDE6;   /* Fondo de secciones alternas */
+  --texto-suave: #5E5852;
+  --linea: rgba(30, 30, 30, .1);
+  --wa: #25D366;
+
+  --serif: 'Cormorant Garamond', Georgia, 'Times New Roman', serif;
+  --sans: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+
+  --ancho: 1180px;
+  --header: 78px;
+  --sombra: 0 24px 60px -28px rgba(30, 30, 30, .38);
+  --curva: cubic-bezier(.2, .7, .2, 1);
+}
+
+/* =========================================================
+   2. BASE
+   ========================================================= */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  font-family: var(--sans);
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--carbon);
+  background: var(--crema);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body.sin-scroll { overflow: hidden; }
+img, video { max-width: 100%; display: block; }
+a { color: inherit; }
+button { font: inherit; }
+:focus-visible { outline: 2px solid var(--oro-oscuro); outline-offset: 3px; border-radius: 6px; }
+
+.contenedor { width: min(var(--ancho), 100% - 40px); margin-inline: auto; }
+section { scroll-margin-top: calc(var(--header) + 4px); }
+.seccion { padding: clamp(76px, 10vw, 124px) 0; }
+
+/* Iconos SVG (estilo Lucide) */
+.icon { width: 20px; height: 20px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.icon-relleno { fill: currentColor; stroke: none; }
+
+/* Títulos */
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; line-height: 1.05; letter-spacing: -.01em; margin: 0; }
+h2 { font-size: clamp(38px, 5.2vw, 58px); }
+h1 em, h2 em { font-style: italic; font-weight: 500; color: var(--oro-oscuro); }
+
+.antetitulo {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--oro-oscuro);
+}
+.antetitulo::before { content: ""; width: 30px; height: 1px; background: var(--oro); }
+
+.cabecera-seccion { max-width: 660px; margin-bottom: 52px; }
+.cabecera-seccion h2 { margin-top: 18px; }
+.cabecera-seccion p { margin: 18px 0 0; font-size: 17px; color: var(--texto-suave); }
+.cabecera-fila { display: flex; justify-content: space-between; align-items: end; gap: 32px; flex-wrap: wrap; margin-bottom: 44px; }
+.cabecera-fila .cabecera-seccion { margin-bottom: 0; }
+
+/* =========================================================
+   3. BOTONES
+   ========================================================= */
+.btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  padding: 16px 26px; border-radius: 999px; border: 1px solid transparent;
+  font: 600 15px/1.1 var(--sans); text-decoration: none; white-space: nowrap; cursor: pointer;
+  transition: transform .3s var(--curva), background .3s, color .3s, border-color .3s, box-shadow .3s;
+}
+.btn:hover { transform: translateY(-2px); }
+.btn-primario { background: var(--carbon); color: var(--crema); }
+.btn-primario:hover { background: #000; box-shadow: 0 14px 30px -14px rgba(0, 0, 0, .55); }
+.btn-primario .icon { color: var(--oro); }
+.btn-oro { background: var(--oro); color: var(--carbon); }
+.btn-oro:hover { background: #c7a879; box-shadow: 0 14px 30px -14px rgba(184, 151, 104, .8); }
+.btn-contorno { background: transparent; color: var(--carbon); border-color: rgba(30, 30, 30, .22); }
+.btn-contorno:hover { border-color: var(--carbon); }
+.btn-claro { background: transparent; color: var(--crema); border-color: rgba(250, 248, 245, .3); }
+.btn-claro:hover { border-color: var(--crema); }
+
+/* =========================================================
+   4. HEADER FIJO + MENÚ MÓVIL
+   ========================================================= */
+.header {
+  position: fixed; inset: 0 0 auto; z-index: 50; height: var(--header);
+  border-bottom: 1px solid transparent;
+  transition: background .35s, border-color .35s, box-shadow .35s;
+}
+.header.con-scroll, .header.menu-abierto {
+  background: rgba(250, 248, 245, .9);
+  -webkit-backdrop-filter: saturate(1.4) blur(14px);
+  backdrop-filter: saturate(1.4) blur(14px);
+  border-color: var(--linea);
+}
+.header .contenedor { height: 100%; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+
+.logo { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+.logo-marca { font-family: var(--serif); font-size: 34px; font-weight: 700; letter-spacing: .02em; line-height: 1; }
+.logo-marca span { color: var(--oro); font-style: italic; font-weight: 500; }
+.logo-texto {
+  font-size: 10.5px; font-weight: 600; letter-spacing: .24em; text-transform: uppercase; line-height: 1.35;
+  color: var(--texto-suave); padding-left: 12px; border-left: 1px solid rgba(30, 30, 30, .18);
+}
+
+.nav { display: flex; align-items: center; gap: 34px; }
+.nav-enlaces { display: flex; gap: 30px; list-style: none; margin: 0; padding: 0; }
+.nav-enlaces a { position: relative; padding: 6px 0; font-size: 14.5px; font-weight: 500; text-decoration: none; }
+.nav-enlaces a::after {
+  content: ""; position: absolute; left: 0; bottom: 0; width: 100%; height: 1px; background: var(--oro);
+  transform: scaleX(0); transform-origin: right; transition: transform .4s var(--curva);
+}
+.nav-enlaces a:hover::after, .nav-enlaces a.activo::after { transform: scaleX(1); transform-origin: left; }
+.nav .btn { padding: 13px 20px; font-size: 14px; }
+
+.header-acciones { display: none; align-items: center; gap: 8px; }
+.boton-icono {
+  width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center;
+  border: 1px solid rgba(30, 30, 30, .15); background: transparent; color: var(--carbon); cursor: pointer; text-decoration: none;
+}
+.boton-icono.wa { background: var(--carbon); color: var(--crema); border-color: var(--carbon); }
+.boton-icono .icon { width: 21px; height: 21px; }
+.menu-toggle .ic-cerrar { display: none; }
+.menu-abierto .menu-toggle .ic-abrir { display: none; }
+.menu-abierto .menu-toggle .ic-cerrar { display: block; }
+
+@media (max-width: 980px) {
+  .header-acciones { display: flex; }
+  .nav {
+    position: fixed; top: var(--header); left: 0; right: 0;
+    flex-direction: column; align-items: stretch; gap: 24px;
+    padding: 12px 20px 32px; background: var(--crema); border-bottom: 1px solid var(--linea);
+    box-shadow: 0 30px 40px -30px rgba(0, 0, 0, .3);
+    opacity: 0; visibility: hidden; transform: translateY(-10px);
+    transition: opacity .3s, transform .3s var(--curva), visibility .3s;
+  }
+  .menu-abierto .nav { opacity: 1; visibility: visible; transform: none; }
+  .nav-enlaces { flex-direction: column; gap: 0; }
+  .nav-enlaces a { display: block; padding: 16px 0; font-family: var(--serif); font-size: 26px; font-weight: 600; border-bottom: 1px solid var(--linea); }
+  .nav-enlaces a::after { display: none; }
+  .nav .btn { padding: 17px 22px; font-size: 15px; }
+}
+@media (max-width: 420px) {
+  .logo-texto { display: none; }
+}
+
+/* =========================================================
+   5. HERO (PORTADA)
+   ========================================================= */
+.hero { position: relative; isolation: isolate; padding: calc(var(--header) + 56px) 0 88px; overflow: hidden; }
+.hero::before {
+  content: ""; position: absolute; z-index: -1; right: -12vw; top: -10vw;
+  width: 58vw; aspect-ratio: 1; border-radius: 50%; background: var(--tierra-suave);
+}
+.hero-grid { display: grid; grid-template-columns: 1.08fr .92fr; gap: 64px; align-items: center; }
+.hero h1 { font-size: clamp(54px, 7.6vw, 100px); margin: 24px 0 26px; }
+.hero h1 .linea { display: block; }
+.hero-entrada { max-width: 520px; margin: 0 0 38px; font-size: 18px; color: var(--texto-suave); }
+.hero-botones { display: flex; flex-wrap: wrap; gap: 14px; }
+
+.hero-confianza {
+  display: flex; flex-wrap: wrap; gap: 18px 40px; margin-top: 48px; padding-top: 28px;
+  border-top: 1px solid var(--linea); font-size: 13.5px; color: var(--texto-suave);
+}
+.hero-confianza strong { display: flex; align-items: center; gap: 6px; font-family: var(--serif); font-size: 30px; line-height: 1; color: var(--carbon); margin-bottom: 4px; }
+.hero-confianza strong .icon { width: 18px; height: 18px; color: var(--oro); }
+
+.hero-visual { position: relative; justify-self: end; width: min(100%, 470px); }
+.hero-arco { aspect-ratio: 4 / 5; border-radius: 240px 240px 26px 26px; overflow: hidden; background: var(--tierra); box-shadow: var(--sombra); }
+.hero-arco img { width: 100%; height: 100%; object-fit: cover; }
+/* Si una imagen no carga, se oculta su texto alternativo para no romper el diseño */
+.hero-arco img, .hero-circulo img, .g-item img { color: transparent; }
+.hero-circulo {
+  position: absolute; left: -60px; bottom: 60px; width: 156px; aspect-ratio: 1; border-radius: 50%;
+  overflow: hidden; border: 7px solid var(--crema); background: var(--tierra); box-shadow: var(--sombra);
+}
+.hero-circulo img { width: 100%; height: 100%; object-fit: cover; }
+.hero-estado {
+  position: absolute; right: -22px; top: 48px; display: flex; align-items: center; gap: 14px;
+  padding: 15px 20px; min-width: 230px; border-radius: 18px; background: #fff; box-shadow: var(--sombra); font-size: 13px; line-height: 1.4;
+}
+.hero-estado strong { display: block; font-size: 14px; }
+.hero-estado small { color: var(--texto-suave); font-size: 12.5px; }
+.punto { width: 10px; height: 10px; border-radius: 50%; background: #c8c0b4; flex: none; }
+.punto.abierto { background: #2e9e62; box-shadow: 0 0 0 5px rgba(46, 158, 98, .16); }
+
+@media (max-width: 920px) {
+  .hero { padding-top: calc(var(--header) + 36px); }
+  .hero-grid { grid-template-columns: 1fr; gap: 64px; }
+  .hero-visual { justify-self: center; width: min(88%, 420px); }
+  .hero-circulo { left: -24px; width: 116px; bottom: 36px; }
+  .hero-estado { right: -18px; top: 28px; min-width: 0; }
+}
+@media (max-width: 520px) {
+  .hero-botones .btn { width: 100%; }
+  .hero-confianza { gap: 18px 28px; }
+}
+
+/* Cinta deslizante con los servicios */
+.cinta { overflow: hidden; background: var(--carbon); color: var(--crema); padding: 20px 0; }
+.cinta-pista { display: flex; align-items: center; gap: 44px; width: max-content; animation: deslizar 42s linear infinite; }
+.cinta-pista span { font-family: var(--serif); font-size: 27px; font-style: italic; white-space: nowrap; }
+.cinta-pista i { color: var(--oro); font-style: normal; font-size: 14px; }
+@keyframes deslizar { to { transform: translateX(-50%); } }
+
+/* =========================================================
+   6. SERVICIOS
+   ========================================================= */
+.servicios-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.categoria { display: flex; flex-direction: column; padding: 38px 34px 26px; border-radius: 26px; background: var(--tierra); }
+.categoria-cabecera { display: flex; align-items: center; gap: 16px; }
+.categoria-icono { width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; background: var(--crema); color: var(--oro-oscuro); }
+.categoria-icono .icon { width: 24px; height: 24px; }
+.categoria h3 { font-size: 32px; }
+.categoria-desc { margin: 14px 0 18px; font-size: 15px; color: var(--texto-suave); }
+
+.servicio { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 8px 20px; padding: 20px 0; border-top: 1px solid rgba(30, 30, 30, .12); }
+.servicio h4 { display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap; margin: 0; font-size: 17px; font-weight: 600; line-height: 1.3; }
+.servicio p { margin: 4px 0 0; font-size: 14px; line-height: 1.55; color: var(--texto-suave); }
+.precio { font-family: var(--serif); font-size: 21px; font-weight: 600; color: var(--oro-oscuro); }
+.precio:empty { display: none; }
+.btn-reservar {
+  display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px; border-radius: 999px;
+  border: 1px solid rgba(30, 30, 30, .16); background: var(--crema); color: var(--carbon);
+  font-size: 13px; font-weight: 600; text-decoration: none; white-space: nowrap;
+  transition: background .3s, color .3s, border-color .3s, transform .3s var(--curva);
+}
+.btn-reservar .icon { width: 16px; height: 16px; color: var(--oro-oscuro); transition: color .3s; }
+.btn-reservar:hover { background: var(--carbon); color: var(--crema); border-color: var(--carbon); transform: translateY(-1px); }
+.btn-reservar:hover .icon { color: var(--oro); }
+
+.nota-servicios {
+  display: flex; align-items: center; justify-content: center; gap: 12px; flex-wrap: wrap;
+  margin-top: 36px; font-size: 15px; color: var(--texto-suave); text-align: center;
+}
+.nota-servicios a { color: var(--carbon); font-weight: 600; text-decoration-color: var(--oro); text-underline-offset: 4px; }
+
+@media (max-width: 860px) { .servicios-grid { grid-template-columns: 1fr; } }
+@media (max-width: 540px) {
+  .categoria { padding: 30px 22px 18px; }
+  .servicio { grid-template-columns: 1fr; }
+  .btn-reservar { justify-self: start; margin-top: 6px; }
+}
+
+/* =========================================================
+   7. GALERÍA DE FOTOS Y VÍDEOS + LIGHTBOX
+   ========================================================= */
+.galeria { background: var(--tierra-suave); }
+.filtros { display: flex; gap: 10px; flex-wrap: wrap; }
+.chip {
+  padding: 10px 18px; border-radius: 999px; border: 1px solid rgba(30, 30, 30, .16);
+  background: transparent; color: var(--carbon); font-size: 14px; font-weight: 500; cursor: pointer;
+  transition: background .3s, color .3s, border-color .3s;
+}
+.chip:hover { border-color: var(--carbon); }
+.chip.activo { background: var(--carbon); color: var(--crema); border-color: var(--carbon); }
+
+.galeria-grid { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 230px; grid-auto-flow: dense; gap: 16px; }
+.g-item {
+  position: relative; overflow: hidden; padding: 0; border: 0; border-radius: 20px;
+  background: var(--tierra); color: #fff; text-align: left; cursor: zoom-in;
+  animation: aparecer .5s var(--curva);
+}
+.g-item[hidden] { display: none; }
+.g-item.alto { grid-row: span 2; }
+.g-item.ancho { grid-column: span 2; }
+.g-item img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s var(--curva); }
+.g-item:hover img { transform: scale(1.05); }
+.g-item::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 55%, rgba(20, 18, 15, .62)); pointer-events: none; }
+.g-pie { position: absolute; z-index: 1; left: 16px; right: 16px; bottom: 14px; display: flex; align-items: center; justify-content: space-between; gap: 10px; font-size: 14px; font-weight: 600; }
+.g-etiqueta { padding: 5px 10px; border-radius: 999px; background: rgba(250, 248, 245, .92); color: var(--carbon); font-size: 10.5px; letter-spacing: .14em; text-transform: uppercase; }
+.g-video { cursor: pointer; }
+.g-play {
+  position: absolute; z-index: 1; inset: 0; margin: auto; width: 66px; height: 66px; border-radius: 50%;
+  display: grid; place-items: center; background: rgba(250, 248, 245, .92); color: var(--carbon);
+  transition: transform .4s var(--curva);
+}
+.g-play .icon { width: 22px; height: 22px; margin-left: 3px; }
+.g-video:hover .g-play { transform: scale(1.1); }
+.g-reel { position: absolute; z-index: 1; top: 14px; left: 14px; }
+@keyframes aparecer { from { opacity: 0; transform: scale(.97); } to { opacity: 1; transform: none; } }
+
+@media (max-width: 960px) { .galeria-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 210px; } }
+@media (max-width: 540px) {
+  .galeria-grid { grid-auto-rows: 160px; gap: 10px; }
+  .g-item { border-radius: 14px; }
+  .g-pie { left: 10px; right: 10px; bottom: 10px; font-size: 12.5px; }
+  .g-pie .g-etiqueta { display: none; }
+  .filtros { flex-wrap: nowrap; overflow-x: auto; margin-inline: -20px; padding: 0 20px 6px; scrollbar-width: none; }
+  .filtros::-webkit-scrollbar { display: none; }
+  .chip { flex: none; }
+}
+
+/* Ventana modal (lightbox) */
+.lightbox {
+  position: fixed; inset: 0; z-index: 100; display: grid; grid-template-columns: 84px 1fr 84px; grid-template-rows: 1fr auto;
+  align-items: center; padding: 28px 20px 22px; background: rgba(17, 16, 14, .95);
+  animation: aparecer .3s ease;
+}
+.lightbox[hidden] { display: none; }
+.lb-escenario { grid-column: 2; grid-row: 1; display: grid; place-items: center; height: 100%; min-height: 0; }
+.lb-escenario img { max-height: calc(100vh - 150px); max-height: calc(100dvh - 150px); width: auto; border-radius: 14px; object-fit: contain; }
+.lb-escenario video { height: calc(100vh - 150px); height: calc(100dvh - 150px); max-width: 100%; aspect-ratio: 9 / 16; border-radius: 14px; background: #000; object-fit: contain; }
+.lb-pendiente { position: relative; height: calc(100vh - 150px); height: calc(100dvh - 150px); aspect-ratio: 9 / 16; max-width: 100%; border-radius: 14px; overflow: hidden; }
+.lb-pendiente img { width: 100%; height: 100%; max-height: none; object-fit: cover; border-radius: 0; filter: brightness(.55); }
+.lb-pendiente p { position: absolute; inset: auto 0 50%; transform: translateY(50%); margin: 0; text-align: center; color: #fff; font-family: var(--serif); font-size: 26px; font-style: italic; }
+.lb-pie { grid-column: 2; grid-row: 2; display: flex; justify-content: center; align-items: baseline; gap: 16px; padding-top: 16px; color: #eee; }
+.lb-pie strong { font-family: var(--serif); font-size: 23px; font-weight: 500; }
+.lb-pie span { font-size: 13px; color: #a8a097; letter-spacing: .08em; }
+.lb-boton {
+  width: 54px; height: 54px; border-radius: 50%; display: grid; place-items: center; cursor: pointer;
+  background: rgba(255, 255, 255, .07); border: 1px solid rgba(255, 255, 255, .16); color: #fff; transition: background .3s;
+}
+.lb-boton:hover { background: rgba(255, 255, 255, .16); }
+.lb-cerrar { position: absolute; top: 18px; right: 18px; }
+.lb-anterior { grid-column: 1; grid-row: 1; justify-self: center; }
+.lb-siguiente { grid-column: 3; grid-row: 1; justify-self: center; }
+@media (max-width: 640px) {
+  .lightbox { grid-template-columns: 1fr; padding: 70px 12px 88px; }
+  .lb-escenario, .lb-pie { grid-column: 1; }
+  .lb-anterior, .lb-siguiente { position: absolute; bottom: 20px; }
+  .lb-anterior { left: 20px; }
+  .lb-siguiente { right: 20px; }
+  .lb-escenario img { max-height: calc(100dvh - 200px); }
+  .lb-escenario video, .lb-pendiente { height: calc(100dvh - 200px); }
+}
+
+/* =========================================================
+   8. RESEÑAS DE GOOGLE
+   ========================================================= */
+.resenas-cabecera { display: grid; grid-template-columns: 360px 1fr; gap: 56px; align-items: center; margin-bottom: 56px; }
+.nota-global { padding: 38px 36px; border-radius: 26px; background: var(--carbon); color: var(--crema); }
+.nota-fila { display: flex; align-items: center; gap: 18px; }
+.nota-numero { font-family: var(--serif); font-size: 100px; font-weight: 600; line-height: .85; }
+.nota-fila small { display: block; margin-top: 8px; font-size: 13.5px; color: #cfc6b8; }
+.estrellas { display: flex; gap: 3px; color: var(--oro); }
+.estrellas .icon { width: 18px; height: 18px; }
+.barras { list-style: none; margin: 28px 0 0; padding: 0; display: grid; gap: 9px; }
+.barras li { display: grid; grid-template-columns: 30px 1fr 46px; align-items: center; gap: 10px; font-size: 13px; color: #cfc6b8; }
+.barras li span:last-child { text-align: right; }
+.barra { height: 6px; border-radius: 9px; overflow: hidden; background: rgba(250, 248, 245, .14); }
+.barra i { display: block; height: 100%; width: var(--w); min-width: var(--min, 0); background: var(--oro); border-radius: 9px; }
+
+.resenas-intro h2 { margin-top: 18px; }
+.resenas-intro > p:not(.temas-titulo) { margin: 18px 0 26px; font-size: 17px; color: var(--texto-suave); max-width: 560px; }
+.temas-titulo { margin: 0 0 12px; font-size: 12px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: var(--oro-oscuro); }
+.temas { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; }
+.tema { display: inline-flex; align-items: center; gap: 8px; padding: 9px 15px; border-radius: 999px; background: var(--tierra); font-size: 14px; }
+.tema b { font-weight: 600; color: var(--oro-oscuro); }
+
+.resenas-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.resena { display: flex; flex-direction: column; gap: 20px; padding: 30px; border-radius: 22px; background: var(--tierra); }
+.resena.destacada { grid-column: span 2; background: var(--tierra-suave); border: 1px solid rgba(184, 151, 104, .45); }
+.resena blockquote { margin: 0; font-family: var(--serif); font-size: 24px; font-style: italic; line-height: 1.3; }
+.resena.destacada blockquote { font-size: clamp(26px, 3vw, 34px); }
+.resena-cabecera { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.resena-tipo { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--texto-suave); }
+.resena-autor { display: flex; align-items: center; gap: 12px; margin-top: auto; font-size: 14px; line-height: 1.35; }
+.resena-autor small { display: block; color: var(--texto-suave); font-size: 12.5px; }
+.avatar { width: 44px; height: 44px; border-radius: 50%; display: grid; place-items: center; flex: none; background: var(--carbon); color: var(--oro); font-family: var(--serif); font-size: 21px; font-weight: 600; }
+
+@media (max-width: 980px) {
+  .resenas-cabecera { grid-template-columns: 1fr; gap: 40px; }
+  .resenas-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 620px) {
+  .resenas-grid { grid-template-columns: 1fr; }
+  .resena.destacada { grid-column: auto; }
+  .nota-numero { font-size: 84px; }
+}
+
+/* =========================================================
+   9. BLOQUE DE RESERVA POR WHATSAPP
+   ========================================================= */
+.reserva { position: relative; overflow: hidden; background: var(--carbon); color: var(--crema); color-scheme: dark; }
+.reserva::before {
+  content: ""; position: absolute; left: -18vw; bottom: -24vw; width: 52vw; aspect-ratio: 1; border-radius: 50%;
+  border: 1px solid rgba(184, 151, 104, .22); pointer-events: none;
+}
+.reserva .contenedor { position: relative; z-index: 1; }
+.reserva .antetitulo { color: var(--oro); }
+.reserva h2 em { color: var(--oro); }
+.reserva .cabecera-seccion p { color: #cfc6b8; }
+.reserva-grid { position: relative; display: grid; grid-template-columns: 1.12fr .88fr; gap: 48px; align-items: start; }
+
+.formulario { display: grid; gap: 22px; padding: 38px; border-radius: 26px; background: #262523; border: 1px solid rgba(250, 248, 245, .1); }
+.fila-doble { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; }
+.campo label, .campo legend { display: block; margin-bottom: 9px; padding: 0; font-size: 12px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #cfc6b8; }
+.campo fieldset { border: 0; margin: 0; padding: 0; min-width: 0; }
+.campo input[type="text"], .campo input[type="date"], .campo select {
+  width: 100%; padding: 15px 16px; border-radius: 14px; border: 1px solid rgba(250, 248, 245, .17);
+  background: rgba(250, 248, 245, .06); color: var(--crema); font: 500 16px var(--sans);
+  -webkit-appearance: none; appearance: none; transition: border-color .3s, background .3s;
+}
+.campo input:focus, .campo select:focus { outline: none; border-color: var(--oro); background: rgba(250, 248, 245, .09); }
+.campo input::placeholder { color: #9c948a; }
+.campo select {
+  padding-right: 44px; cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='18' height='18' viewBox='0 0 24 24' fill='none' stroke='%23B89768' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat; background-position: right 16px center;
+}
+.campo select option, .campo select optgroup { background: #2a2a2a; color: var(--crema); }
+
+.franjas { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.franja { position: relative; cursor: pointer; }
+.campo .franja { margin: 0; font-size: 16px; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--crema); }
+.franja input { position: absolute; opacity: 0; pointer-events: none; }
+.franja span {
+  display: block; padding: 15px 16px; border-radius: 14px; border: 1px solid rgba(250, 248, 245, .17);
+  font-weight: 600; transition: border-color .3s, background .3s;
+}
+.franja small { display: block; margin-top: 2px; font-size: 13px; font-weight: 500; color: #b9b0a2; }
+.franja input:checked + span { border-color: var(--oro); background: rgba(184, 151, 104, .15); }
+.franja input:focus-visible + span { outline: 2px solid var(--oro); outline-offset: 2px; }
+.franja input:disabled + span { opacity: .4; cursor: not-allowed; }
+
+.aviso { min-height: 22px; margin: -6px 0 0; font-size: 14px; color: #f1a896; }
+.formulario .btn { width: 100%; padding: 18px 26px; font-size: 16px; }
+.formulario .btn[disabled] { opacity: .5; cursor: not-allowed; transform: none; }
+.nota-form { margin: -8px 0 0; text-align: center; font-size: 13px; color: #a8a097; }
+
+/* Vista previa del mensaje (estilo chat) */
+.vista-previa { position: sticky; top: calc(var(--header) + 24px); padding: 28px; border-radius: 26px; background: #2a2723; border: 1px solid rgba(250, 248, 245, .08); }
+.chat-cabecera { display: flex; align-items: center; gap: 12px; padding-bottom: 18px; margin-bottom: 20px; border-bottom: 1px solid rgba(250, 248, 245, .1); }
+.chat-cabecera .avatar { background: var(--oro); color: var(--carbon); }
+.chat-cabecera strong { display: block; font-size: 15px; }
+.chat-cabecera small { color: #a8a097; font-size: 12.5px; }
+.burbuja {
+  margin-left: auto; max-width: 92%; padding: 14px 16px 22px; position: relative;
+  border-radius: 16px 16px 4px 16px; background: #DCEFD0; color: #1E1E1E;
+  font-size: 14.5px; line-height: 1.55; white-space: pre-line; box-shadow: 0 8px 20px -10px rgba(0, 0, 0, .5);
+}
+.burbuja::after { content: "✓✓"; position: absolute; right: 12px; bottom: 5px; font-size: 11px; color: #4f9bd9; letter-spacing: -2px; }
+.pasos { list-style: none; margin: 26px 0 0; padding: 0; display: grid; gap: 14px; font-size: 14px; color: #cfc6b8; }
+.pasos li { display: flex; gap: 12px; align-items: flex-start; }
+.pasos b { flex: none; width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; background: rgba(184, 151, 104, .18); color: var(--oro); font-size: 12.5px; }
+
+@media (max-width: 920px) {
+  .reserva-grid { grid-template-columns: 1fr; }
+  .vista-previa { position: static; }
+}
+@media (max-width: 540px) {
+  .formulario { padding: 26px 20px; }
+  .fila-doble { grid-template-columns: 1fr; }
+}
+
+/* =========================================================
+   10. UBICACIÓN, HORARIO Y CONTACTO
+   ========================================================= */
+.ubicacion-grid { display: grid; grid-template-columns: 1.12fr .88fr; gap: 28px; align-items: stretch; }
+.mapa { position: relative; min-height: 480px; border-radius: 26px; overflow: hidden; background: var(--tierra); box-shadow: var(--sombra); }
+.mapa iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: grayscale(.3) sepia(.12); }
+.info { display: flex; flex-direction: column; gap: 26px; padding: 38px 36px; border-radius: 26px; background: var(--tierra); }
+.info h3 { font-size: 26px; display: flex; align-items: center; gap: 12px; }
+.info h3 .icon { color: var(--oro-oscuro); }
+.direccion { margin: 10px 0 0; font-size: 16.5px; line-height: 1.6; }
+.direccion small { display: block; color: var(--texto-suave); font-size: 13.5px; margin-top: 4px; }
+.info-botones { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
+.info-botones .btn { padding: 13px 20px; font-size: 14px; }
+
+.horario { width: 100%; border-collapse: collapse; margin-top: 12px; font-size: 15px; }
+.horario td { padding: 10px 0; border-bottom: 1px solid rgba(30, 30, 30, .1); vertical-align: top; }
+.horario td:last-child { text-align: right; }
+.horario tr:last-child td { border-bottom: 0; }
+.horario .cerrado { color: var(--texto-suave); }
+.horario tr.hoy td { font-weight: 700; }
+.horario tr.hoy td:first-child::after {
+  content: "Hoy"; margin-left: 8px; padding: 2px 8px; border-radius: 999px; background: var(--carbon); color: var(--crema);
+  font-size: 10.5px; letter-spacing: .1em; text-transform: uppercase; vertical-align: 2px;
+}
+.accesible { display: flex; align-items: flex-start; gap: 10px; margin: 0; font-size: 13.5px; color: var(--texto-suave); }
+.accesible .icon { color: var(--oro-oscuro); margin-top: 2px; }
+
+@media (max-width: 920px) {
+  .ubicacion-grid { grid-template-columns: 1fr; }
+  .mapa { min-height: 360px; }
+}
+@media (max-width: 540px) { .info { padding: 30px 22px; } }
+
+/* =========================================================
+   11. FOOTER + BOTÓN FLOTANTE DE WHATSAPP
+   ========================================================= */
+.footer { padding: 64px 0 36px; background: var(--carbon); color: #cfc6b8; font-size: 14px; }
+.footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(250, 248, 245, .1); }
+.footer .logo { color: var(--crema); margin-bottom: 16px; }
+.footer .logo-texto { color: #a8a097; border-color: rgba(250, 248, 245, .2); }
+.footer h4 { margin: 0 0 14px; color: var(--crema); font-size: 12px; letter-spacing: .18em; text-transform: uppercase; }
+.footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.footer a { text-decoration: none; }
+.footer a:hover { color: var(--oro); }
+.footer-base { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding-top: 26px; font-size: 12.5px; color: #8d857a; }
+@media (max-width: 760px) { .footer-grid { grid-template-columns: 1fr; gap: 30px; } }
+
+.wa-flotante {
+  position: fixed; right: 22px; bottom: 22px; z-index: 60; width: 62px; height: 62px; border-radius: 50%;
+  display: grid; place-items: center; background: var(--wa); color: #fff; text-decoration: none;
+  box-shadow: 0 16px 34px -12px rgba(0, 0, 0, .5); transition: transform .3s var(--curva);
+}
+.wa-flotante:hover { transform: scale(1.07); }
+.wa-flotante .icon { width: 28px; height: 28px; stroke-width: 2; }
+.wa-flotante::before {
+  content: ""; position: absolute; inset: 0; border-radius: 50%; border: 2px solid var(--wa);
+  animation: latido 2.6s ease-out infinite;
+}
+.wa-texto {
+  position: absolute; right: 74px; padding: 9px 14px; border-radius: 12px; background: var(--carbon); color: var(--crema);
+  font-size: 13px; font-weight: 600; white-space: nowrap; opacity: 0; transform: translateX(8px); pointer-events: none;
+  transition: opacity .3s, transform .3s var(--curva);
+}
+.wa-flotante:hover .wa-texto { opacity: 1; transform: none; }
+@keyframes latido { 0% { transform: scale(1); opacity: .7; } 80%, 100% { transform: scale(1.6); opacity: 0; } }
+
+/* =========================================================
+   12. ANIMACIONES AL HACER SCROLL
+   ========================================================= */
+.js .revelar { opacity: 0; transform: translateY(30px); transition: opacity 1s var(--curva), transform 1s var(--curva); transition-delay: var(--retraso, 0s); }
+.js .revelar.visible { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .js .revelar { opacity: 1; transform: none; transition: none; }
+  .cinta-pista, .wa-flotante::before, .g-item, .lightbox { animation: none; }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================================================
+     ICONOS SVG (estilo Lucide). Se usan con <svg><use href="#i-nombre"/></svg>
+     ========================================================= -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-chat" viewBox="0 0 24 24"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9 10h.01M12 10h.01M15 10h.01"/></symbol>
+  <symbol id="i-tijeras" viewBox="0 0 24 24"><circle cx="6" cy="6" r="3"/><path d="M8.12 8.12 12 12"/><path d="M20 4 8.12 15.88"/><circle cx="6" cy="18" r="3"/><path d="M14.8 14.8 20 20"/></symbol>
+  <symbol id="i-capas" viewBox="0 0 24 24"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/></symbol>
+  <symbol id="i-brillo" viewBox="0 0 24 24"><path d="M9.94 14.06 8.5 19.5l-1.44-5.44L1.5 12.5l5.56-1.44L8.5 5.5l1.44 5.56 5.56 1.44Z"/><path d="M18 3v4M16 5h4M19 15v4M17 17h4"/></symbol>
+  <symbol id="i-corazon" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></symbol>
+  <symbol id="i-estrella" viewBox="0 0 24 24"><path d="M11.525 2.295a.53.53 0 0 1 .95 0l2.31 4.679a2.123 2.123 0 0 0 1.595 1.16l5.166.756a.53.53 0 0 1 .294.904l-3.736 3.638a2.123 2.123 0 0 0-.611 1.878l.882 5.14a.53.53 0 0 1-.771.56l-4.618-2.428a2.122 2.122 0 0 0-1.973 0L6.396 21.01a.53.53 0 0 1-.77-.56l.881-5.139a2.122 2.122 0 0 0-.611-1.879L2.16 9.795a.53.53 0 0 1 .294-.906l5.165-.755a2.122 2.122 0 0 0 1.597-1.16z"/></symbol>
+  <symbol id="i-reloj" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-telefono" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></symbol>
+  <symbol id="i-ruta" viewBox="0 0 24 24"><path d="M3 11 22 2l-9 19-2-8Z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 3.5v17a1 1 0 0 0 1.5.86l14-8.5a1 1 0 0 0 0-1.72l-14-8.5A1 1 0 0 0 6 3.5Z"/></symbol>
+  <symbol id="i-cerrar" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-izq" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-der" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M7 17 17 7M7 7h10v10"/></symbol>
+  <symbol id="i-accesible" viewBox="0 0 24 24"><circle cx="16" cy="4" r="1"/><path d="m18 19 1-7-6 1"/><path d="m5 8 3-3 5.5 3-2.36 3.5"/><path d="M4.24 14.5a5 5 0 0 0 6.88 6"/><path d="M13.76 17.5a5 5 0 0 0-6.88-6"/></symbol>
+</svg>
+
+
+<!-- =========================================================
+     1. HEADER FIJO (NAVBAR)
+     ========================================================= -->
+<header class="header" id="header">
+  <div class="contenedor">
+    <a href="#inicio" class="logo" aria-label="K&amp;H Peluquería Caballeros, ir al inicio">
+      <span class="logo-marca">K<span>&amp;</span>H</span>
+      <span class="logo-texto">Peluquería<br>Caballeros</span>
+    </a>
+
+    <nav class="nav" id="nav" aria-label="Navegación principal">
+      <ul class="nav-enlaces">
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galería y Vídeos</a></li>
+        <li><a href="#resenas">Reseñas</a></li>
+        <li><a href="#ubicacion">Ubicación</a></li>
+      </ul>
+      <a class="btn btn-primario" data-wa href="https://wa.me/34609910079" target="_blank" rel="noopener">
+        <svg class="icon"><use href="#i-chat"/></svg> Pedir Cita por WhatsApp
+      </a>
+    </nav>
+
+    <!-- Acciones visibles solo en móvil -->
+    <div class="header-acciones">
+      <a class="boton-icono wa" data-wa href="https://wa.me/34609910079" target="_blank" rel="noopener" aria-label="Pedir cita por WhatsApp">
+        <svg class="icon"><use href="#i-chat"/></svg>
+      </a>
+      <button class="boton-icono menu-toggle" id="menu-toggle" type="button" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú">
+        <svg class="icon ic-abrir"><use href="#i-menu"/></svg>
+        <svg class="icon ic-cerrar"><use href="#i-cerrar"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+
+<main id="inicio">
+
+  <!-- =========================================================
+       2. HERO (PORTADA)
+       ========================================================= -->
+  <section class="hero" aria-labelledby="titulo-hero">
+    <div class="contenedor hero-grid">
+      <div class="hero-texto">
+        <span class="antetitulo revelar">Peluquería de caballeros · Malvarrosa, València</span>
+        <h1 id="titulo-hero" class="revelar" style="--retraso:.08s">
+          <span class="linea">K&amp;H Peluquería</span>
+          <span class="linea"><em>Caballeros</em></span>
+        </h1>
+        <p class="hero-entrada revelar" style="--retraso:.16s">
+          Cortes a tijera y a máquina, degradados y arreglo de barba con el trato cercano de siempre.
+          Una valoración de 5,0 en Google avalada por más de 1.200 clientes del barrio.
+        </p>
+        <div class="hero-botones revelar" style="--retraso:.24s">
+          <a class="btn btn-primario" data-wa href="https://wa.me/34609910079" target="_blank" rel="noopener">
+            <svg class="icon"><use href="#i-chat"/></svg> Reservar Cita por WhatsApp
+          </a>
+          <a class="btn btn-contorno" href="#servicios">Ver Servicios</a>
+        </div>
+
+        <div class="hero-confianza revelar" style="--retraso:.32s">
+          <div>
+            <strong>5,0 <svg class="icon icon-relleno"><use href="#i-estrella"/></svg></strong>
+            Valoración en Google
+          </div>
+          <div>
+            <strong>1.225</strong>
+            Reseñas de clientes
+          </div>
+          <div>
+            <strong>Lun – Sáb</strong>
+            Mañana y tarde
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual revelar" style="--retraso:.2s">
+        <!-- REEMPLAZAR CON FOTO DE LA FICHA (portada): interior del salón o un corte destacado -->
+        <div class="hero-arco">
+          <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=1000&q=80"
+               alt="Sillón de barbero de cuero negro frente a una pared de ladrillo" fetchpriority="high">
+        </div>
+        <!-- REEMPLAZAR CON FOTO DE LA FICHA (detalle circular) -->
+        <div class="hero-circulo">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=400&q=80"
+               alt="Tijeras, peine y productos de barbería" loading="lazy">
+        </div>
+        <!-- Estado de apertura: se calcula automáticamente con el horario real -->
+        <div class="hero-estado" aria-live="polite">
+          <span class="punto" id="estado-punto"></span>
+          <div>
+            <strong id="estado-titulo">Horario</strong>
+            <small id="estado-texto">L–V 9:30–14:00 · 17:00–20:00</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cinta decorativa con los servicios -->
+  <div class="cinta" aria-hidden="true">
+    <div class="cinta-pista">
+      <span>Corte a tijera</span><i>✦</i><span>Degradado</span><i>✦</i><span>Corte a máquina</span><i>✦</i>
+      <span>Arreglo de barba</span><i>✦</i><span>Perfilado a navaja</span><i>✦</i><span>Corte infantil</span><i>✦</i>
+      <span>Corte a tijera</span><i>✦</i><span>Degradado</span><i>✦</i><span>Corte a máquina</span><i>✦</i>
+      <span>Arreglo de barba</span><i>✦</i><span>Perfilado a navaja</span><i>✦</i><span>Corte infantil</span><i>✦</i>
+    </div>
+  </div>
+
+
+  <!-- =========================================================
+       3. CARTA DE SERVICIOS
+       Cada servicio lleva data-servicio="Nombre". Ese nombre se usa:
+       - en el mensaje de WhatsApp del botón "Reservar este servicio"
+       - en el desplegable del formulario de reserva
+       Para poner precio, escríbelo dentro de <span class="precio"></span> (ej. 12 €).
+       ========================================================= -->
+  <section class="seccion" id="servicios" aria-labelledby="titulo-servicios">
+    <div class="contenedor">
+      <div class="cabecera-seccion revelar">
+        <span class="antetitulo">Carta de servicios</span>
+        <h2 id="titulo-servicios">Oficio de barbero, <em>a tu medida</em></h2>
+        <p>Cortes clásicos y actuales para hombres y niños. Elige tu servicio y resérvalo al momento por WhatsApp.</p>
+      </div>
+
+      <div class="servicios-grid">
+
+        <!-- Categoría: Corte y peinado -->
+        <article class="categoria revelar" data-categoria="Corte y peinado">
+          <div class="categoria-cabecera">
+            <span class="categoria-icono"><svg class="icon"><use href="#i-tijeras"/></svg></span>
+            <h3>Corte y peinado</h3>
+          </div>
+          <p class="categoria-desc">A tijera o a máquina, pensado para tu tipo de pelo y tu día a día.</p>
+
+          <div class="servicio" data-servicio="Corte de caballero">
+            <div>
+              <h4>Corte de caballero <span class="precio"><!-- PRECIO --></span></h4>
+              <p>Tijera o máquina, adaptado a tu estilo y con acabado peinado.</p>
+            </div>
+            <a class="btn-reservar" href="https://wa.me/34609910079" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-chat"/></svg> Reservar este servicio
+            </a>
+          </div>
+
+          <div class="servicio" data-servicio="Corte a máquina al número">
+            <div>
+              <h4>Corte a máquina al número <span class="precio"><!-- PRECIO --></span></h4>
+              <p>Limpio, uniforme y rápido. Dinos el número y nos encargamos del resto.</p>
+            </div>
+            <a class="btn-reservar" href="https://wa.me/34609910079" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-chat"/></svg> Reservar este servicio
+            </a>
+          </div>
+        </article>
+
+        <!-- Categoría: Degradados y navaja -->
+        <article class="categoria revelar" style="--retraso:.1s" data-categoria="Degradados y navaja">
+          <div class="categoria-cabecera">
+            <span class="categoria-icono"><svg class="icon"><use href="#i-capas"/></svg></span>
+            <h3>Degradados y navaja</h3>
+          </div>
+          <p class="categoria-desc">Transiciones limpias y contornos definidos, de lo más pedido en el salón.</p>
+
+          <div class="servicio" data-servicio="Degradado (fade)">
+            <div>
+              <h4>Degradado (fade) <span class="precio"><!-- PRECIO --></span></h4>
+              <p>Bajo, medio o alto, con transición suave entre medidas.</p>
+            </div>
+            <a class="btn-reservar" href="https://wa.me/34609910079" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-chat"/></svg> Reservar este servicio
+            </a>
+          </div>
+
+          <div class="servicio" data-servicio="Perfilado a navaja">
+            <div>
+              <h4>Perfilado a navaja <span class="precio"><!-- PRECIO --></span></h4>
+              <p>Nuca, patillas y contornos marcados a navaja para un acabado nítido.</p>
+            </div>
+            <a class="btn-reservar" href="https://wa.me/34609910079" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-chat"/></svg> Reservar este servicio
+            </a>
+          </div>
+        </article>
+
+        <!-- Categoría: Barba -->
+        <article class="categoria revelar" data-categoria="Barba">
+          <div class="categoria-cabecera">
+            <span class="categoria-icono"><svg class="icon"><use href="#i-brillo"/></svg></span>
+            <h3>Barba</h3>
+          </div>
+          <p class="categoria-desc">Recorte y perfilado para que la barba acompañe al corte.</p>
+
+          <div class="servicio" data-servicio="Arreglo de barba">
+            <div>
+              <h4>Arreglo de barba <span class="precio"><!-- PRECIO --></span></h4>
+              <p>Recorte, igualado y perfilado de líneas.</p>
+            </div>
+            <a class="btn-reservar" href="https://wa.me/34609910079" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-chat"/></svg> Reservar este servicio
+            </a>
+          </div>
+
+          <div class="servicio" data-servicio="Corte + arreglo de barba">
+            <div>
+              <h4>Corte + arreglo de barba <span class="precio"><!-- PRECIO --></span></h4>
+              <p>El servicio completo: pelo y barba en una sola cita.</p>
+            </div>
+            <a class="btn-reservar" href="https://wa.me/34609910079" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-chat"/></svg> Reservar este servicio
+            </a>
+          </div>
+        </article>
+
+        <!-- Categoría: Niños y familia -->
+        <article class="categoria revelar" style="--retraso:.1s" data-categoria="Niños y familia">
+          <div class="categoria-cabecera">
+            <span class="categoria-icono"><svg class="icon"><use href="#i-corazon"/></svg></span>
+            <h3>Niños y familia</h3>
+          </div>
+          <p class="categoria-desc">Padres, hijos y abuelos: en K&amp;H se corta el pelo toda la familia.</p>
+
+          <div class="servicio" data-servicio="Corte infantil">
+            <div>
+              <h4>Corte infantil <span class="precio"><!-- PRECIO --></span></h4>
+              <p>Con paciencia y buen ambiente, para que vengan contentos.</p>
+            </div>
+            <a class="btn-reservar" href="https://wa.me/34609910079" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-chat"/></svg> Reservar este servicio
+            </a>
+          </div>
+
+          <div class="servicio" data-servicio="Primer corte de pelo">
+            <div>
+              <h4>Primer corte de pelo <span class="precio"><!-- PRECIO --></span></h4>
+              <p>Un momento especial que hacemos con calma y sin prisas.</p>
+            </div>
+            <a class="btn-reservar" href="https://wa.me/34609910079" target="_blank" rel="noopener">
+              <svg class="icon"><use href="#i-chat"/></svg> Reservar este servicio
+            </a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="nota-servicios revelar">
+        ¿Dudas sobre qué corte te queda mejor o sobre precios?
+        <a data-wa="Hola, tengo una consulta sobre vuestros servicios y precios." href="https://wa.me/34609910079" target="_blank" rel="noopener">Pregúntanos por WhatsApp</a>
+      </p>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       4. GALERÍA DE FOTOS Y VÍDEOS
+       CÓMO SUSTITUIR:
+       - FOTO: cambia el src de <img> (miniatura) y data-grande (imagen ampliada).
+               Puedes poner rutas locales, p. ej. src="fotos/degradado-1.jpg".
+       - VÍDEO: pon la ruta del .mp4 vertical en data-video (p. ej. "videos/reel-1.mp4")
+                y una imagen de portada en el src del <img>.
+       - Categorías (data-categoria): cortes, degradados, barba, salon, videos
+         (un elemento puede tener varias separadas por espacios).
+       - Clases de tamaño: "alto" (ocupa 2 filas) y "ancho" (ocupa 2 columnas).
+       ========================================================= -->
+  <section class="seccion galeria" id="galeria" aria-labelledby="titulo-galeria">
+    <div class="contenedor">
+      <div class="cabecera-fila">
+        <div class="cabecera-seccion revelar">
+          <span class="antetitulo">Galería y vídeos</span>
+          <h2 id="titulo-galeria">Nuestro trabajo, <em>de cerca</em></h2>
+          <p>Degradados, cortes a tijera y barbas perfiladas: así trabajamos cada día en la Malvarrosa.</p>
+        </div>
+        <div class="filtros revelar" role="group" aria-label="Filtrar galería">
+          <button class="chip activo" type="button" data-filtro="todos" aria-pressed="true">Todos</button>
+          <button class="chip" type="button" data-filtro="cortes" aria-pressed="false">Cortes</button>
+          <button class="chip" type="button" data-filtro="degradados" aria-pressed="false">Degradados</button>
+          <button class="chip" type="button" data-filtro="barba" aria-pressed="false">Barba</button>
+          <button class="chip" type="button" data-filtro="salon" aria-pressed="false">El salón</button>
+          <button class="chip" type="button" data-filtro="videos" aria-pressed="false">Vídeos</button>
+        </div>
+      </div>
+
+      <div class="galeria-grid" id="galeria-grid">
+
+        <!-- REEMPLAZAR CON FOTO DE LA FICHA -->
+        <button type="button" class="g-item alto" data-tipo="foto" data-categoria="cortes" data-titulo="Corte a tijera"
+                data-grande="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?auto=format&fit=crop&w=800&q=75" alt="Barbero cortando el pelo a tijera a un cliente" loading="lazy">
+          <span class="g-pie">Corte a tijera <span class="g-etiqueta">Cortes</span></span>
+        </button>
+
+        <!-- REEMPLAZAR CON FOTO DE LA FICHA -->
+        <button type="button" class="g-item" data-tipo="foto" data-categoria="degradados" data-titulo="Degradado a máquina"
+                data-grande="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1493256338651-d82f7acb2b38?auto=format&fit=crop&w=800&q=75" alt="Degradado hecho con máquina cortapelo" loading="lazy">
+          <span class="g-pie">Degradado a máquina <span class="g-etiqueta">Degradados</span></span>
+        </button>
+
+        <!-- REEMPLAZAR CON VÍDEO DE LA FICHA: pon la ruta del .mp4 vertical en data-video y la portada en el src del img -->
+        <button type="button" class="g-item g-video alto" data-tipo="video" data-categoria="videos degradados" data-titulo="Reel · Degradado paso a paso"
+                data-video="">
+          <img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=700&q=75" alt="Portada del vídeo: degradado paso a paso" loading="lazy">
+          <span class="g-etiqueta g-reel">Reel</span>
+          <span class="g-play"><svg class="icon icon-relleno"><use href="#i-play"/></svg></span>
+          <span class="g-pie">Degradado paso a paso</span>
+        </button>
+
+        <!-- REEMPLAZAR CON FOTO DE LA FICHA -->
+        <button type="button" class="g-item" data-tipo="foto" data-categoria="barba" data-titulo="Arreglo de barba"
+                data-grande="https://images.unsplash.com/photo-1532710093739-9470acff878f?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1532710093739-9470acff878f?auto=format&fit=crop&w=800&q=75" alt="Arreglo y perfilado de barba" loading="lazy">
+          <span class="g-pie">Arreglo de barba <span class="g-etiqueta">Barba</span></span>
+        </button>
+
+        <!-- REEMPLAZAR CON FOTO DE LA FICHA -->
+        <button type="button" class="g-item" data-tipo="foto" data-categoria="salon" data-titulo="Nuestro sillón"
+                data-grande="https://images.unsplash.com/photo-1592647420148-bfcc177e2117?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1592647420148-bfcc177e2117?auto=format&fit=crop&w=800&q=75" alt="Sillón de barbería" loading="lazy">
+          <span class="g-pie">Nuestro sillón <span class="g-etiqueta">El salón</span></span>
+        </button>
+
+        <!-- REEMPLAZAR CON VÍDEO DE LA FICHA: pon la ruta del .mp4 vertical en data-video y la portada en el src del img -->
+        <button type="button" class="g-item g-video alto" data-tipo="video" data-categoria="videos barba" data-titulo="Reel · Barba perfilada"
+                data-video="">
+          <img src="https://images.unsplash.com/photo-1549271568-e87e07c5406b?auto=format&fit=crop&w=700&q=75" alt="Portada del vídeo: barba perfilada" loading="lazy">
+          <span class="g-etiqueta g-reel">Reel</span>
+          <span class="g-play"><svg class="icon icon-relleno"><use href="#i-play"/></svg></span>
+          <span class="g-pie">Barba perfilada</span>
+        </button>
+
+        <!-- REEMPLAZAR CON VÍDEO DE LA FICHA: pon la ruta del .mp4 vertical en data-video y la portada en el src del img -->
+        <button type="button" class="g-item g-video alto" data-tipo="video" data-categoria="videos salon" data-titulo="Reel · Un día en K&amp;H"
+                data-video="">
+          <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?auto=format&fit=crop&w=700&q=75" alt="Portada del vídeo: un día en el salón" loading="lazy">
+          <span class="g-etiqueta g-reel">Reel</span>
+          <span class="g-play"><svg class="icon icon-relleno"><use href="#i-play"/></svg></span>
+          <span class="g-pie">Un día en K&amp;H</span>
+        </button>
+
+        <!-- REEMPLAZAR CON FOTO DE LA FICHA -->
+        <button type="button" class="g-item ancho" data-tipo="foto" data-categoria="cortes" data-titulo="Corte clásico"
+                data-grande="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=75" alt="Cliente sentado en el sillón de barbero" loading="lazy">
+          <span class="g-pie">Corte clásico <span class="g-etiqueta">Cortes</span></span>
+        </button>
+
+        <!-- REEMPLAZAR CON FOTO DE LA FICHA -->
+        <button type="button" class="g-item ancho" data-tipo="foto" data-categoria="cortes degradados" data-titulo="Acabado y detalle"
+                data-grande="https://images.unsplash.com/photo-1593702295094-aea22597af65?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1593702295094-aea22597af65?auto=format&fit=crop&w=1000&q=75" alt="Barbero repasando el acabado de un corte" loading="lazy">
+          <span class="g-pie">Acabado y detalle <span class="g-etiqueta">Cortes</span></span>
+        </button>
+
+        <!-- REEMPLAZAR CON FOTO DE LA FICHA -->
+        <button type="button" class="g-item" data-tipo="foto" data-categoria="salon" data-titulo="Herramientas del oficio"
+                data-grande="https://images.unsplash.com/photo-1596362601603-b74f6ef166e4?auto=format&fit=crop&w=1600&q=80">
+          <img src="https://images.unsplash.com/photo-1596362601603-b74f6ef166e4?auto=format&fit=crop&w=800&q=75" alt="Tijeras y peine de barbero" loading="lazy">
+          <span class="g-pie">Herramientas del oficio <span class="g-etiqueta">El salón</span></span>
+        </button>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       5. MURO DE RESEÑAS DE GOOGLE
+       Datos reales de la ficha (26/11/2026): 5,0 de media, 1.225 reseñas.
+       Las tarjetas muestran fragmentos breves de reseñas reales.
+       ========================================================= -->
+  <section class="seccion" id="resenas" aria-labelledby="titulo-resenas">
+    <div class="contenedor">
+      <div class="resenas-cabecera">
+        <div class="nota-global revelar">
+          <div class="nota-fila">
+            <span class="nota-numero">5,0</span>
+            <div>
+              <div class="estrellas" aria-label="5 de 5 estrellas">
+                <svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg>
+              </div>
+              <small>1.225 reseñas en Google</small>
+            </div>
+          </div>
+          <ul class="barras" aria-label="Distribución de valoraciones">
+            <li><span>5 ★</span><span class="barra"><i style="--w:98.5%"></i></span><span>1.207</span></li>
+            <li><span>4 ★</span><span class="barra"><i style="--w:1.1%;--min:4px"></i></span><span>13</span></li>
+            <li><span>3 ★</span><span class="barra"><i style="--w:.3%;--min:3px"></i></span><span>3</span></li>
+            <li><span>2 ★</span><span class="barra"><i style="--w:0%"></i></span><span>0</span></li>
+            <li><span>1 ★</span><span class="barra"><i style="--w:.2%;--min:3px"></i></span><span>2</span></li>
+          </ul>
+        </div>
+
+        <div class="resenas-intro revelar" style="--retraso:.1s">
+          <span class="antetitulo">Reseñas de Google</span>
+          <h2 id="titulo-resenas">Lo que dicen <em>nuestros clientes</em></h2>
+          <p>Más de mil doscientas opiniones con una nota media de 5,0. El trato, el detalle y el buen precio son lo que más se repite.</p>
+          <p class="temas-titulo">Lo más mencionado</p>
+          <div class="temas">
+            <span class="tema">corte de pelo <b>82</b></span>
+            <span class="tema">simpático <b>68</b></span>
+            <span class="tema">económico <b>34</b></span>
+            <span class="tema">degradado <b>27</b></span>
+            <span class="tema">artista <b>22</b></span>
+            <span class="tema">hijo <b>17</b></span>
+          </div>
+          <a class="btn btn-contorno" href="https://maps.app.goo.gl/CGNkQETaXcJFkhFB6" target="_blank" rel="noopener">
+            Ver todas las reseñas en Google <svg class="icon"><use href="#i-flecha"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="resenas-grid">
+        <article class="resena destacada revelar">
+          <div class="resena-cabecera">
+            <div class="estrellas" aria-label="5 estrellas"><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg></div>
+            <span class="resena-tipo">Reseña de Google</span>
+          </div>
+          <blockquote>“Antonio es un profesional como pocos: atento, con muy buen gusto…”</blockquote>
+          <div class="resena-autor"><span class="avatar">A</span><div>Adrià I.<small>Cliente · 15 reseñas en Google</small></div></div>
+        </article>
+
+        <article class="resena revelar" style="--retraso:.1s">
+          <div class="resena-cabecera">
+            <div class="estrellas" aria-label="5 estrellas"><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg></div>
+            <span class="resena-tipo">Google</span>
+          </div>
+          <blockquote>“Antonio el mejor peluquero de la Malva, súper amable…”</blockquote>
+          <div class="resena-autor"><span class="avatar">D</span><div>Delfina A.<small>Local Guide</small></div></div>
+        </article>
+
+        <article class="resena revelar">
+          <div class="resena-cabecera">
+            <div class="estrellas" aria-label="5 estrellas"><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg></div>
+            <span class="resena-tipo">Google</span>
+          </div>
+          <blockquote>“El trato es impecable y cuida muchísimo los detalles…”</blockquote>
+          <div class="resena-autor"><span class="avatar">Á</span><div>Ángel L.<small>Corte y arreglo de barba</small></div></div>
+        </article>
+
+        <article class="resena revelar" style="--retraso:.1s">
+          <div class="resena-cabecera">
+            <div class="estrellas" aria-label="5 estrellas"><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg></div>
+            <span class="resena-tipo">Google</span>
+          </div>
+          <blockquote>“Salí muy contento con el corte, y a buen precio. Seguro que vuelvo”</blockquote>
+          <div class="resena-autor"><span class="avatar">C</span><div>César P.<small>Corte de caballero</small></div></div>
+        </article>
+
+        <article class="resena revelar" style="--retraso:.2s">
+          <div class="resena-cabecera">
+            <div class="estrellas" aria-label="5 estrellas"><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg><svg class="icon icon-relleno"><use href="#i-estrella"/></svg></div>
+            <span class="resena-tipo">Google</span>
+          </div>
+          <blockquote>“…supo acertar el tipo de corte, el chico amable, servicio rapido”</blockquote>
+          <div class="resena-autor"><span class="avatar">B</span><div>Baria<small>Primer corte de su hijo</small></div></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       6. RESERVA TU CITA POR WHATSAPP (formulario interactivo)
+       El desplegable de servicios se rellena solo con la carta de servicios.
+       ========================================================= -->
+  <section class="seccion reserva" id="reserva" aria-labelledby="titulo-reserva">
+    <div class="contenedor">
+      <div class="cabecera-seccion revelar">
+        <span class="antetitulo">Reserva online</span>
+        <h2 id="titulo-reserva">Reserva tu cita <em>por WhatsApp</em></h2>
+        <p>Rellena tres datos y te abrimos WhatsApp con el mensaje preparado. Solo tienes que enviarlo y te confirmamos la hora exacta.</p>
+      </div>
+
+      <div class="reserva-grid">
+        <form class="formulario revelar" id="form-reserva" novalidate>
+          <div class="fila-doble">
+            <div class="campo">
+              <label for="f-nombre">Tu nombre</label>
+              <input type="text" id="f-nombre" name="nombre" placeholder="Ej.: Javier" autocomplete="given-name" required>
+            </div>
+            <div class="campo">
+              <label for="f-servicio">Servicio</label>
+              <select id="f-servicio" name="servicio" required>
+                <option value="" disabled selected>Elige un servicio</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="campo">
+            <label for="f-dia">Día preferido</label>
+            <input type="date" id="f-dia" name="dia" required>
+          </div>
+
+          <div class="campo">
+            <fieldset>
+              <legend>Franja horaria</legend>
+              <div class="franjas">
+                <label class="franja">
+                  <input type="radio" name="franja" value="Mañana" checked>
+                  <span>Mañana <small id="h-manana">9:30 – 14:00</small></span>
+                </label>
+                <label class="franja">
+                  <input type="radio" name="franja" value="Tarde">
+                  <span>Tarde <small id="h-tarde">17:00 – 20:00</small></span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+
+          <p class="aviso" id="aviso" role="alert"></p>
+
+          <button type="submit" class="btn btn-oro" id="btn-enviar">
+            <svg class="icon"><use href="#i-chat"/></svg> Confirmar por WhatsApp
+          </button>
+          <p class="nota-form">La cita queda confirmada cuando te respondamos por WhatsApp.</p>
+        </form>
+
+        <aside class="vista-previa revelar" style="--retraso:.12s" aria-label="Vista previa del mensaje">
+          <div class="chat-cabecera">
+            <span class="avatar">K</span>
+            <div><strong>K&amp;H Peluquería Caballeros</strong><small>Así llegará tu mensaje</small></div>
+          </div>
+          <div class="burbuja" id="burbuja" aria-live="polite"></div>
+          <ol class="pasos">
+            <li><b>1</b>Eliges servicio, día y franja.</li>
+            <li><b>2</b>Se abre WhatsApp con el mensaje escrito.</li>
+            <li><b>3</b>Lo envías y te confirmamos la hora.</li>
+          </ol>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- =========================================================
+       7. UBICACIÓN, HORARIO Y CONTACTO
+       ========================================================= -->
+  <section class="seccion" id="ubicacion" aria-labelledby="titulo-ubicacion">
+    <div class="contenedor">
+      <div class="cabecera-seccion revelar">
+        <span class="antetitulo">Ubicación y horario</span>
+        <h2 id="titulo-ubicacion">Te esperamos en <em>la Malvarrosa</em></h2>
+      </div>
+
+      <div class="ubicacion-grid">
+        <div class="mapa revelar">
+          <iframe
+            title="Mapa de K&amp;H Peluquería Caballeros"
+            src="https://maps.google.com/maps?q=K%26H%20Peluqueria%20Caballeros%2C%20C%2F%20de%20l'Illa%20de%20Hierro%2C%2012%2C%2046011%20Val%C3%A8ncia&z=17&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+
+        <div class="info revelar" style="--retraso:.1s">
+          <div>
+            <h3><svg class="icon"><use href="#i-pin"/></svg> Dirección</h3>
+            <p class="direccion">
+              C/ de l'Illa de Hierro, 12<br>
+              Poblats Marítims · 46011 València
+              <small>Código Plus: FMMC+25 Valencia</small>
+            </p>
+            <div class="info-botones">
+              <a class="btn btn-primario" href="https://www.google.com/maps/dir/?api=1&amp;destination=K%26H%20Peluqueria%20Caballeros%2C%20C%2F%20de%20l'Illa%20de%20Hierro%2012%2C%2046011%20Val%C3%A8ncia" target="_blank" rel="noopener">
+                <svg class="icon"><use href="#i-ruta"/></svg> Cómo llegar
+              </a>
+              <!-- Teléfono de PRUEBA. Teléfono real de la ficha: 652 10 49 65 (tel:+34652104965) -->
+              <a class="btn btn-contorno" href="tel:+34609910079">
+                <svg class="icon"><use href="#i-telefono"/></svg> 609 91 00 79
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3><svg class="icon"><use href="#i-reloj"/></svg> Horario</h3>
+            <table class="horario" id="tabla-horario">
+              <tbody>
+                <tr data-dia="1"><td>Lunes</td><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+                <tr data-dia="2"><td>Martes</td><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+                <tr data-dia="3"><td>Miércoles</td><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+                <tr data-dia="4"><td>Jueves</td><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+                <tr data-dia="5"><td>Viernes</td><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
+                <tr data-dia="6"><td>Sábado</td><td>10:00 – 14:00 · 17:00 – 19:00</td></tr>
+                <tr data-dia="0"><td>Domingo</td><td class="cerrado">Cerrado</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="accesible">
+            <svg class="icon"><use href="#i-accesible"/></svg>
+            Entrada, aparcamiento y aseo accesibles para personas en silla de ruedas.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="footer">
+  <div class="contenedor">
+    <div class="footer-grid">
+      <div>
+        <a href="#inicio" class="logo">
+          <span class="logo-marca">K<span>&amp;</span>H</span>
+          <span class="logo-texto">Peluquería<br>Caballeros</span>
+        </a>
+        <p>Peluquería de caballeros en la Malvarrosa (València). Cortes, degradados y barba con trato cercano.</p>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul>
+          <li>C/ de l'Illa de Hierro, 12 · 46011 València</li>
+          <li><a href="tel:+34609910079">609 91 00 79</a></li>
+          <li><a data-wa href="https://wa.me/34609910079" target="_blank" rel="noopener">WhatsApp</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Horario</h4>
+        <ul>
+          <li>Lun – Vie · 9:30 – 14:00 · 17:00 – 20:00</li>
+          <li>Sábado · 10:00 – 14:00 · 17:00 – 19:00</li>
+          <li>Domingo · Cerrado</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-base">
+      <span>© <span id="anio">2026</span> K&amp;H Peluquería Caballeros</span>
+      <span>Fotografías de ejemplo: Unsplash</span>
+    </div>
+  </div>
+</footer>
+
+
+<!-- Botón flotante permanente de WhatsApp -->
+<a class="wa-flotante" data-wa href="https://wa.me/34609910079" target="_blank" rel="noopener" aria-label="Pedir cita por WhatsApp">
+  <span class="wa-texto">¿Te reservamos cita?</span>
+  <svg class="icon"><use href="#i-chat"/></svg>
+</a>
+
+
+<!-- Ventana modal de la galería (lightbox) -->
+<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Galería ampliada" hidden>
+  <button class="lb-boton lb-cerrar" type="button" id="lb-cerrar" aria-label="Cerrar"><svg class="icon"><use href="#i-cerrar"/></svg></button>
+  <button class="lb-boton lb-anterior" type="button" id="lb-anterior" aria-label="Anterior"><svg class="icon"><use href="#i-izq"/></svg></button>
+  <div class="lb-escenario" id="lb-escenario"></div>
+  <button class="lb-boton lb-siguiente" type="button" id="lb-siguiente" aria-label="Siguiente"><svg class="icon"><use href="#i-der"/></svg></button>
+  <div class="lb-pie"><strong id="lb-titulo"></strong><span id="lb-contador"></span></div>
+</div>
+
+
+<script>
+(function () {
+  'use strict';
+
+  /* =========================================================
+     CONFIGURACIÓN GENERAL
+     ========================================================= */
+  const CONFIG = {
+    negocio: 'K&H Peluquería Caballeros',
+    // Número de WhatsApp de PRUEBA, en formato internacional sin "+" ni espacios.
+    // Teléfono real que aparece en la ficha de Google Maps: 652 10 49 65 → '34652104965'
+    whatsapp: '34609910079',
+    // Horario real de la ficha de Google Maps. 0 = domingo, 1 = lunes … 6 = sábado
+    horario: {
+      0: [],
+      1: [['09:30', '14:00'], ['17:00', '20:00']],
+      2: [['09:30', '14:00'], ['17:00', '20:00']],
+      3: [['09:30', '14:00'], ['17:00', '20:00']],
+      4: [['09:30', '14:00'], ['17:00', '20:00']],
+      5: [['09:30', '14:00'], ['17:00', '20:00']],
+      6: [['10:00', '14:00'], ['17:00', '19:00']]
+    }
+  };
+
+  const MENSAJE_GENERAL = 'Hola, me gustaría pedir cita en ' + CONFIG.negocio + '.';
+  const DIAS = ['domingo', 'lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado'];
+
+  const $ = (sel, ctx) => (ctx || document).querySelector(sel);
+  const $$ = (sel, ctx) => Array.from((ctx || document).querySelectorAll(sel));
+
+  /* Construye el enlace de WhatsApp con el mensaje codificado */
+  const enlaceWhatsApp = (mensaje) =>
+    'https://wa.me/' + CONFIG.whatsapp + '?text=' + encodeURIComponent(mensaje);
+
+  /* Abre WhatsApp en otra pestaña (o en la misma si el navegador bloquea la ventana) */
+  function abrirWhatsApp(mensaje) {
+    const url = enlaceWhatsApp(mensaje);
+    const ventana = window.open(url, '_blank');
+    if (ventana) { ventana.opener = null; } else { window.location.href = url; }
+  }
+
+  /* Utilidades de horas: '09:30' → 570 minutos, y 570 → '9:30' */
+  const aMinutos = (hhmm) => { const [h, m] = hhmm.split(':').map(Number); return h * 60 + m; };
+  const formatoHora = (hhmm) => hhmm.replace(/^0/, '');
+
+
+  /* =========================================================
+     1. ENLACES DE WHATSAPP
+     ========================================================= */
+  // Botones generales (atributo data-wa; si tiene texto, se usa como mensaje)
+  $$('[data-wa]').forEach((el) => {
+    el.href = enlaceWhatsApp(el.dataset.wa || MENSAJE_GENERAL);
+  });
+
+  // Botones "Reservar este servicio": mensaje con el servicio exacto
+  $$('.servicio[data-servicio]').forEach((servicio) => {
+    const nombre = servicio.dataset.servicio;
+    const boton = $('.btn-reservar', servicio);
+    if (!boton) return;
+    boton.href = enlaceWhatsApp(
+      'Hola, me gustaría reservar cita para el servicio "' + nombre + '" en ' + CONFIG.negocio + '. ¿Qué disponibilidad tenéis?'
+    );
+    boton.setAttribute('aria-label', 'Reservar ' + nombre + ' por WhatsApp');
+  });
+
+
+  /* =========================================================
+     2. HEADER: fondo al hacer scroll + menú móvil
+     ========================================================= */
+  const header = $('#header');
+  const botonMenu = $('#menu-toggle');
+
+  const actualizarHeader = () => header.classList.toggle('con-scroll', window.scrollY > 12);
+  actualizarHeader();
+  window.addEventListener('scroll', actualizarHeader, { passive: true });
+
+  function cerrarMenu() {
+    header.classList.remove('menu-abierto');
+    botonMenu.setAttribute('aria-expanded', 'false');
+    botonMenu.setAttribute('aria-label', 'Abrir menú');
+  }
+  botonMenu.addEventListener('click', () => {
+    const abierto = header.classList.toggle('menu-abierto');
+    botonMenu.setAttribute('aria-expanded', String(abierto));
+    botonMenu.setAttribute('aria-label', abierto ? 'Cerrar menú' : 'Abrir menú');
+  });
+  $$('.nav a').forEach((a) => a.addEventListener('click', cerrarMenu));
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') cerrarMenu(); });
+
+  // Marca en el menú la sección visible
+  const enlacesMenu = $$('.nav-enlaces a');
+  if ('IntersectionObserver' in window) {
+    const obsSecciones = new IntersectionObserver((entradas) => {
+      entradas.forEach((entrada) => {
+        if (!entrada.isIntersecting) return;
+        enlacesMenu.forEach((a) => a.classList.toggle('activo', a.getAttribute('href') === '#' + entrada.target.id));
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+    ['servicios', 'galeria', 'resenas', 'ubicacion'].forEach((id) => {
+      const s = document.getElementById(id);
+      if (s) obsSecciones.observe(s);
+    });
+  }
+
+
+  /* =========================================================
+     3. ESTADO DE APERTURA (hero) Y DÍA ACTUAL (tabla de horario)
+     ========================================================= */
+  function estadoApertura(ahora) {
+    const dia = ahora.getDay();
+    const minutos = ahora.getHours() * 60 + ahora.getMinutes();
+    const tramosHoy = CONFIG.horario[dia];
+
+    // ¿Está abierto ahora mismo?
+    for (const [inicio, fin] of tramosHoy) {
+      if (minutos >= aMinutos(inicio) && minutos < aMinutos(fin)) {
+        return { abierto: true, titulo: 'Abierto ahora', texto: 'Hoy hasta las ' + formatoHora(fin) };
+      }
+    }
+    // ¿Vuelve a abrir más tarde hoy?
+    for (const [inicio] of tramosHoy) {
+      if (minutos < aMinutos(inicio)) {
+        return { abierto: false, titulo: 'Cerrado ahora', texto: 'Abre hoy a las ' + formatoHora(inicio) };
+      }
+    }
+    // Próximo día con horario
+    for (let i = 1; i <= 7; i++) {
+      const d = (dia + i) % 7;
+      if (CONFIG.horario[d].length) {
+        const cuando = i === 1 ? 'mañana' : 'el ' + DIAS[d];
+        return { abierto: false, titulo: 'Cerrado ahora', texto: 'Abre ' + cuando + ' a las ' + formatoHora(CONFIG.horario[d][0][0]) };
+      }
+    }
+    return { abierto: false, titulo: 'Cerrado', texto: '' };
+  }
+
+  function pintarEstado() {
+    const estado = estadoApertura(new Date());
+    $('#estado-punto').classList.toggle('abierto', estado.abierto);
+    $('#estado-titulo').textContent = estado.titulo;
+    $('#estado-texto').textContent = estado.texto;
+  }
+  pintarEstado();
+  setInterval(pintarEstado, 60000);
+
+  const filaHoy = $('#tabla-horario tr[data-dia="' + new Date().getDay() + '"]');
+  if (filaHoy) filaHoy.classList.add('hoy');
+
+
+  /* =========================================================
+     4. GALERÍA: filtros por categoría + lightbox (fotos y vídeos)
+     ========================================================= */
+  const elementos = $$('.g-item');
+  const chips = $$('.chip');
+
+  chips.forEach((chip) => {
+    chip.addEventListener('click', () => {
+      const filtro = chip.dataset.filtro;
+      chips.forEach((c) => {
+        c.classList.toggle('activo', c === chip);
+        c.setAttribute('aria-pressed', String(c === chip));
+      });
+      elementos.forEach((el) => {
+        const categorias = (el.dataset.categoria || '').split(' ');
+        el.hidden = !(filtro === 'todos' || categorias.includes(filtro));
+      });
+    });
+  });
+
+  const lightbox = $('#lightbox');
+  const escenario = $('#lb-escenario');
+  const tituloLb = $('#lb-titulo');
+  const contadorLb = $('#lb-contador');
+  let visibles = [];
+  let indice = 0;
+  let focoAnterior = null;
+
+  function pintarLightbox() {
+    const el = visibles[indice];
+    const miniatura = $('img', el);
+    escenario.innerHTML = '';
+
+    if (el.dataset.tipo === 'video') {
+      if (el.dataset.video) {
+        const video = document.createElement('video');
+        video.src = el.dataset.video;
+        video.poster = miniatura ? miniatura.src : '';
+        video.controls = true;
+        video.autoplay = true;
+        video.playsInline = true;
+        escenario.appendChild(video);
+      } else {
+        // Vídeo aún no subido: se muestra la portada con un aviso
+        const caja = document.createElement('div');
+        caja.className = 'lb-pendiente';
+        const img = document.createElement('img');
+        img.src = miniatura ? miniatura.src : '';
+        img.alt = '';
+        const texto = document.createElement('p');
+        texto.textContent = 'Vídeo próximamente';
+        caja.append(img, texto);
+        escenario.appendChild(caja);
+      }
+    } else {
+      const img = document.createElement('img');
+      img.src = el.dataset.grande || (miniatura ? miniatura.src : '');
+      img.alt = miniatura ? miniatura.alt : '';
+      escenario.appendChild(img);
+    }
+
+    tituloLb.textContent = el.dataset.titulo || '';
+    contadorLb.textContent = (indice + 1) + ' / ' + visibles.length;
+  }
+
+  function abrirLightbox(el) {
+    visibles = elementos.filter((x) => !x.hidden);
+    indice = Math.max(0, visibles.indexOf(el));
+    focoAnterior = document.activeElement;
+    lightbox.hidden = false;
+    document.body.classList.add('sin-scroll');
+    pintarLightbox();
+    $('#lb-cerrar').focus();
+  }
+
+  function cerrarLightbox() {
+    lightbox.hidden = true;
+    escenario.innerHTML = ''; // detiene cualquier vídeo en reproducción
+    document.body.classList.remove('sin-scroll');
+    if (focoAnterior) focoAnterior.focus();
+  }
+
+  function moverLightbox(paso) {
+    indice = (indice + paso + visibles.length) % visibles.length;
+    pintarLightbox();
+  }
+
+  elementos.forEach((el) => el.addEventListener('click', () => abrirLightbox(el)));
+  $('#lb-cerrar').addEventListener('click', cerrarLightbox);
+  $('#lb-anterior').addEventListener('click', () => moverLightbox(-1));
+  $('#lb-siguiente').addEventListener('click', () => moverLightbox(1));
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox || e.target === escenario) cerrarLightbox();
+  });
+  document.addEventListener('keydown', (e) => {
+    if (lightbox.hidden) return;
+    if (e.key === 'Escape') cerrarLightbox();
+    if (e.key === 'ArrowLeft') moverLightbox(-1);
+    if (e.key === 'ArrowRight') moverLightbox(1);
+  });
+
+  // Gesto de deslizar en móvil
+  let toqueX = null;
+  lightbox.addEventListener('touchstart', (e) => { toqueX = e.touches[0].clientX; }, { passive: true });
+  lightbox.addEventListener('touchend', (e) => {
+    if (toqueX === null) return;
+    const dx = e.changedTouches[0].clientX - toqueX;
+    if (Math.abs(dx) > 50) moverLightbox(dx < 0 ? 1 : -1);
+    toqueX = null;
+  });
+
+
+  /* =========================================================
+     5. FORMULARIO DE RESERVA POR WHATSAPP
+     ========================================================= */
+  const form = $('#form-reserva');
+  const campoNombre = $('#f-nombre');
+  const campoServicio = $('#f-servicio');
+  const campoDia = $('#f-dia');
+  const aviso = $('#aviso');
+  const burbuja = $('#burbuja');
+  const botonEnviar = $('#btn-enviar');
+
+  // Rellena el desplegable con la carta de servicios (agrupado por categoría)
+  $$('.categoria').forEach((cat) => {
+    const grupo = document.createElement('optgroup');
+    grupo.label = cat.dataset.categoria;
+    $$('.servicio', cat).forEach((s) => {
+      const opcion = document.createElement('option');
+      opcion.value = s.dataset.servicio;
+      opcion.textContent = s.dataset.servicio;
+      grupo.appendChild(opcion);
+    });
+    campoServicio.appendChild(grupo);
+  });
+  const otra = document.createElement('option');
+  otra.value = 'Otro servicio (lo comento por aquí)';
+  otra.textContent = 'Otro / aún no lo sé';
+  campoServicio.appendChild(otra);
+
+  // Fecha mínima = hoy; por defecto, el próximo día que abre
+  const fechaISO = (d) => {
+    const local = new Date(d.getTime() - d.getTimezoneOffset() * 60000);
+    return local.toISOString().slice(0, 10);
+  };
+  const hoy = new Date();
+  campoDia.min = fechaISO(hoy);
+  const propuesta = new Date(hoy);
+  while (!CONFIG.horario[propuesta.getDay()].length) propuesta.setDate(propuesta.getDate() + 1);
+  campoDia.value = fechaISO(propuesta);
+
+  // Convierte '2026-11-27' en un objeto Date local (sin desfase horario)
+  const leerFecha = (valor) => {
+    if (!valor) return null;
+    const [a, m, d] = valor.split('-').map(Number);
+    return new Date(a, m - 1, d);
+  };
+
+  const fechaLarga = (fecha) => {
+    const texto = fecha.toLocaleDateString('es-ES', { weekday: 'long', day: 'numeric', month: 'long' });
+    return texto.charAt(0).toUpperCase() + texto.slice(1);
+  };
+
+  const franjaElegida = () => $('input[name="franja"]:checked', form);
+
+  // Actualiza las horas de cada franja según el día elegido
+  function actualizarFranjas() {
+    const fecha = leerFecha(campoDia.value);
+    const tramos = fecha ? CONFIG.horario[fecha.getDay()] : CONFIG.horario[1];
+    const radios = $$('input[name="franja"]', form);
+    if (tramos.length) {
+      $('#h-manana').textContent = formatoHora(tramos[0][0]) + ' – ' + formatoHora(tramos[0][1]);
+      $('#h-tarde').textContent = formatoHora(tramos[1][0]) + ' – ' + formatoHora(tramos[1][1]);
+      radios.forEach((r) => { r.disabled = false; });
+    } else {
+      $('#h-manana').textContent = 'Cerrado';
+      $('#h-tarde').textContent = 'Cerrado';
+      radios.forEach((r) => { r.disabled = true; });
+    }
+  }
+
+  // Comprueba los datos y devuelve un texto de error (o cadena vacía si todo está bien)
+  function validar() {
+    const fecha = leerFecha(campoDia.value);
+    if (!campoNombre.value.trim()) return 'Escribe tu nombre para que sepamos quién eres.';
+    if (!campoServicio.value) return 'Elige el servicio que quieres.';
+    if (!fecha) return 'Elige el día que prefieres.';
+    if (campoDia.value < campoDia.min) return 'Elige un día a partir de hoy.';
+    if (!CONFIG.horario[fecha.getDay()].length) return 'Los domingos estamos cerrados. Elige otro día, por favor.';
+    return '';
+  }
+
+  // Construye el mensaje de WhatsApp con los datos del formulario
+  function construirMensaje() {
+    const nombre = campoNombre.value.trim();
+    const fecha = leerFecha(campoDia.value);
+    const franja = franjaElegida();
+    const horas = franja ? $('small', franja.nextElementSibling).textContent : '';
+    const lineas = [
+      'Hola' + (nombre ? ', soy ' + nombre : '') + '. Me gustaría pedir cita en ' + CONFIG.negocio + ':',
+      '',
+      '• Servicio: ' + (campoServicio.value || '—'),
+      '• Día: ' + (fecha ? fechaLarga(fecha) : '—'),
+      '• Franja: ' + (franja ? franja.value + ' (' + horas + ')' : '—'),
+      '',
+      '¿Me confirmáis una hora? ¡Gracias!'
+    ];
+    return lineas.join('\n');
+  }
+
+  // Vista previa en directo + aviso si el día está cerrado
+  function refrescar() {
+    actualizarFranjas();
+    burbuja.textContent = construirMensaje();
+    const fecha = leerFecha(campoDia.value);
+    const cerrado = fecha && !CONFIG.horario[fecha.getDay()].length;
+    aviso.textContent = cerrado ? 'Los domingos estamos cerrados. Elige otro día, por favor.' : '';
+    botonEnviar.disabled = Boolean(cerrado);
+  }
+
+  form.addEventListener('input', refrescar);
+  form.addEventListener('change', refrescar);
+  refrescar();
+
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const error = validar();
+    if (error) {
+      aviso.textContent = error;
+      if (!campoNombre.value.trim()) campoNombre.focus();
+      else if (!campoServicio.value) campoServicio.focus();
+      else campoDia.focus();
+      return;
+    }
+    aviso.textContent = '';
+    abrirWhatsApp(construirMensaje());
+  });
+
+
+  /* =========================================================
+     6. ANIMACIONES SUAVES AL HACER SCROLL
+     ========================================================= */
+  const animables = $$('.revelar');
+  if ('IntersectionObserver' in window) {
+    const obs = new IntersectionObserver((entradas, observador) => {
+      entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+          entrada.target.classList.add('visible');
+          observador.unobserve(entrada.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    animables.forEach((el) => obs.observe(el));
+  } else {
+    animables.forEach((el) => el.classList.add('visible'));
+  }
+
+
+  /* =========================================================
+     7. AÑO DEL FOOTER
+     ========================================================= */
+  $('#anio').textContent = new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
