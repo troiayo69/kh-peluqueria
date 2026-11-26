@@ -36,13 +36,7 @@
     "addressCountry": "ES"
   },
   "geo": { "@type": "GeoCoordinates", "latitude": 39.4825634, "longitude": -0.3295699 },
-  "hasMap": "https://maps.app.goo.gl/CGNkQETaXcJFkhFB6",
-  "openingHoursSpecification": [
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "09:30", "closes": "14:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "17:00", "closes": "20:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "14:00" },
-    { "@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "17:00", "closes": "19:00" }
-  ]
+  "hasMap": "https://maps.app.goo.gl/CGNkQETaXcJFkhFB6"
 }
 </script>
 
@@ -506,6 +500,7 @@ h1 em, h2 em { font-style: italic; font-weight: 500; color: var(--oro-oscuro); }
 .horario td { padding: 10px 0; border-bottom: 1px solid rgba(30, 30, 30, .1); vertical-align: top; }
 .horario td:last-child { text-align: right; }
 .horario tr:last-child td { border-bottom: 0; }
+.horario-texto { margin: 12px 0 0; font-size: 15px; line-height: 1.7; }
 .horario .cerrado { color: var(--texto-suave); }
 .horario tr.hoy td { font-weight: 700; }
 .horario tr.hoy td:first-child::after {
@@ -643,14 +638,14 @@ h1 em, h2 em { font-style: italic; font-weight: 500; color: var(--oro-oscuro); }
   <section class="hero" aria-labelledby="titulo-hero">
     <div class="contenedor hero-grid">
       <div class="hero-texto">
-        <span class="antetitulo revelar">Peluquería de caballeros · Malvarrosa, València</span>
+        <span class="antetitulo revelar">Peluquería de caballeros en la Malvarrosa (València)</span>
         <h1 id="titulo-hero" class="revelar" style="--retraso:.08s">
           <span class="linea">K&amp;H Peluquería</span>
           <span class="linea"><em>Caballeros</em></span>
         </h1>
         <p class="hero-entrada revelar" style="--retraso:.16s">
           Cortes a tijera y a máquina, degradados y arreglo de barba con el trato cercano de siempre.
-          Una valoración de 5,0 en Google avalada por más de 1.200 clientes del barrio.
+          Una valoración de 5,0 en Google avalada por más de 1.200 clientes del barrio. Con 20 años de trayectoria.
         </p>
         <div class="hero-botones revelar" style="--retraso:.24s">
           <a class="btn btn-primario" data-wa href="https://wa.me/34652104965" target="_blank" rel="noopener">
@@ -685,14 +680,6 @@ h1 em, h2 em { font-style: italic; font-weight: 500; color: var(--oro-oscuro); }
         <div class="hero-circulo">
           <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9T_6j4cJRgkrA0a_XO6DpxN5Def77cymCGtArSF1XaNP9ZN-57QE-CHcBptMU-C0zNhVy5ZDIGwkjJyag9Z6uqTEFLUz5j7ts1OhiQHLyKzUHSnrJKyQl-hlb9SzD4emc8V-d7d=w600-h600-k-no"
                alt="Herramientas y productos de barbería sobre la encimera" loading="lazy">
-        </div>
-        <!-- Estado de apertura: se calcula automáticamente con el horario real -->
-        <div class="hero-estado" aria-live="polite">
-          <span class="punto" id="estado-punto"></span>
-          <div>
-            <strong id="estado-titulo">Horario</strong>
-            <small id="estado-texto">L–V 9:30–14:00 · 17:00–20:00</small>
-          </div>
         </div>
       </div>
     </div>
@@ -1064,11 +1051,11 @@ h1 em, h2 em { font-style: italic; font-weight: 500; color: var(--oro-oscuro); }
               <div class="franjas">
                 <label class="franja">
                   <input type="radio" name="franja" value="Mañana" checked>
-                  <span>Mañana <small id="h-manana">9:30 – 14:00</small></span>
+                  <span>Mañana</span>
                 </label>
                 <label class="franja">
                   <input type="radio" name="franja" value="Tarde">
-                  <span>Tarde <small id="h-tarde">17:00 – 20:00</small></span>
+                  <span>Tarde</span>
                 </label>
               </div>
             </fieldset>
@@ -1139,17 +1126,7 @@ h1 em, h2 em { font-style: italic; font-weight: 500; color: var(--oro-oscuro); }
 
           <div>
             <h3><svg class="icon"><use href="#i-reloj"/></svg> Horario</h3>
-            <table class="horario" id="tabla-horario">
-              <tbody>
-                <tr data-dia="1"><td>Lunes</td><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
-                <tr data-dia="2"><td>Martes</td><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
-                <tr data-dia="3"><td>Miércoles</td><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
-                <tr data-dia="4"><td>Jueves</td><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
-                <tr data-dia="5"><td>Viernes</td><td>9:30 – 14:00 · 17:00 – 20:00</td></tr>
-                <tr data-dia="6"><td>Sábado</td><td>10:00 – 14:00 · 17:00 – 19:00</td></tr>
-                <tr data-dia="0"><td>Domingo</td><td class="cerrado">Cerrado</td></tr>
-              </tbody>
-            </table>
+            <p class="horario-texto">Lunes a sábado: mañana y tarde<br>Domingo: cerrado</p>
           </div>
 
           <p class="accesible">
@@ -1188,9 +1165,8 @@ h1 em, h2 em { font-style: italic; font-weight: 500; color: var(--oro-oscuro); }
       <div>
         <h4>Horario</h4>
         <ul>
-          <li>Lun – Vie · 9:30 – 14:00 · 17:00 – 20:00</li>
-          <li>Sábado · 10:00 – 14:00 · 17:00 – 19:00</li>
-          <li>Domingo · Cerrado</li>
+          <li>Lunes a sábado · mañana y tarde</li>
+          <li>Domingo · cerrado</li>
         </ul>
       </div>
     </div>
@@ -1322,50 +1298,6 @@ h1 em, h2 em { font-style: italic; font-weight: 500; color: var(--oro-oscuro); }
       if (s) obsSecciones.observe(s);
     });
   }
-
-
-  /* =========================================================
-     3. ESTADO DE APERTURA (hero) Y DÍA ACTUAL (tabla de horario)
-     ========================================================= */
-  function estadoApertura(ahora) {
-    const dia = ahora.getDay();
-    const minutos = ahora.getHours() * 60 + ahora.getMinutes();
-    const tramosHoy = CONFIG.horario[dia];
-
-    // ¿Está abierto ahora mismo?
-    for (const [inicio, fin] of tramosHoy) {
-      if (minutos >= aMinutos(inicio) && minutos < aMinutos(fin)) {
-        return { abierto: true, titulo: 'Abierto ahora', texto: 'Hoy hasta las ' + formatoHora(fin) };
-      }
-    }
-    // ¿Vuelve a abrir más tarde hoy?
-    for (const [inicio] of tramosHoy) {
-      if (minutos < aMinutos(inicio)) {
-        return { abierto: false, titulo: 'Cerrado ahora', texto: 'Abre hoy a las ' + formatoHora(inicio) };
-      }
-    }
-    // Próximo día con horario
-    for (let i = 1; i <= 7; i++) {
-      const d = (dia + i) % 7;
-      if (CONFIG.horario[d].length) {
-        const cuando = i === 1 ? 'mañana' : 'el ' + DIAS[d];
-        return { abierto: false, titulo: 'Cerrado ahora', texto: 'Abre ' + cuando + ' a las ' + formatoHora(CONFIG.horario[d][0][0]) };
-      }
-    }
-    return { abierto: false, titulo: 'Cerrado', texto: '' };
-  }
-
-  function pintarEstado() {
-    const estado = estadoApertura(new Date());
-    $('#estado-punto').classList.toggle('abierto', estado.abierto);
-    $('#estado-titulo').textContent = estado.titulo;
-    $('#estado-texto').textContent = estado.texto;
-  }
-  pintarEstado();
-  setInterval(pintarEstado, 60000);
-
-  const filaHoy = $('#tabla-horario tr[data-dia="' + new Date().getDay() + '"]');
-  if (filaHoy) filaHoy.classList.add('hoy');
 
 
   /* =========================================================
@@ -1512,20 +1444,11 @@ h1 em, h2 em { font-style: italic; font-weight: 500; color: var(--oro-oscuro); }
 
   const franjaElegida = () => $('input[name="franja"]:checked', form);
 
-  // Actualiza las horas de cada franja según el día elegido
+  // Activa o desactiva las franjas según el día elegido (domingo cerrado)
   function actualizarFranjas() {
     const fecha = leerFecha(campoDia.value);
-    const tramos = fecha ? CONFIG.horario[fecha.getDay()] : CONFIG.horario[1];
-    const radios = $$('input[name="franja"]', form);
-    if (tramos.length) {
-      $('#h-manana').textContent = formatoHora(tramos[0][0]) + ' – ' + formatoHora(tramos[0][1]);
-      $('#h-tarde').textContent = formatoHora(tramos[1][0]) + ' – ' + formatoHora(tramos[1][1]);
-      radios.forEach((r) => { r.disabled = false; });
-    } else {
-      $('#h-manana').textContent = 'Cerrado';
-      $('#h-tarde').textContent = 'Cerrado';
-      radios.forEach((r) => { r.disabled = true; });
-    }
+    const abierto = fecha ? CONFIG.horario[fecha.getDay()].length > 0 : true;
+    $$('input[name="franja"]', form).forEach((r) => { r.disabled = !abierto; });
   }
 
   // Comprueba los datos y devuelve un texto de error (o cadena vacía si todo está bien)
@@ -1544,13 +1467,12 @@ h1 em, h2 em { font-style: italic; font-weight: 500; color: var(--oro-oscuro); }
     const nombre = campoNombre.value.trim();
     const fecha = leerFecha(campoDia.value);
     const franja = franjaElegida();
-    const horas = franja ? $('small', franja.nextElementSibling).textContent : '';
     const lineas = [
       'Hola' + (nombre ? ', soy ' + nombre : '') + '. Me gustaría pedir cita en ' + CONFIG.negocio + ':',
       '',
       '• Servicio: ' + (campoServicio.value || '—'),
       '• Día: ' + (fecha ? fechaLarga(fecha) : '—'),
-      '• Franja: ' + (franja ? franja.value + ' (' + horas + ')' : '—'),
+      '• Franja: ' + (franja ? franja.value : '—'),
       '',
       '¿Me confirmáis una hora? ¡Gracias!'
     ];
